@@ -3,8 +3,8 @@ import { RootState } from '../features/store'
 
 
 function CoinCard() {
-const { coinData } = useSelector((state:RootState)=>state.coin.trendingCoins)
-console.log(coinData);
+// const { coinData } = useSelector((state:RootState)=>state.coin.trendingCoins)
+// console.log(coinData);
 
   return (
     <div className=''>{

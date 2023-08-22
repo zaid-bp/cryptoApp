@@ -7,13 +7,13 @@ import ListCoins from './Components/listCoins'
 import CoinCard from './Components/coins'
 
 function App() {
-const {isLoadingCoins, isError} = useSelector((state:RootState)=>state.coin)
+const {isLoading, isError} = useSelector((state:RootState)=>state.coin)
 const dispatch = useDispatch()
 useEffect(()=>{
   dispatch(fetchData() as any)
   dispatch(fetchTrendings() as any)
 },[dispatch])
-if(isLoadingCoins){
+if(isLoading){
   return <p>Loading...</p>
 }
 if(isError){
