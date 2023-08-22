@@ -34,13 +34,6 @@ const coinSlice = createSlice({
         .addCase(fetchData.rejected, (state, action)=>{
             state.isError = action.error.message
         })
-        // .addCase(fetchTrendings.fulfilled,(state, action)=>{
-        //     state.trendingCoins = action.payload;
-        //     state.isLoadingTrends = false;
-        // })
-        // .addCase(fetchTrendings.rejected, (state, action)=>{
-        //     state.trendError = action.error.message
-        // })
     },
 })
 
