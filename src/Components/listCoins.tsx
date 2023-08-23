@@ -25,7 +25,7 @@ function ListCoins() {
       return(
         <tr className='custom Contentshovered ContentsActive' key={id}>
           <td className='contents'>
-          <Link className='contents' to={`coindetail/${name}`}>
+          <Link className='contents' to={`coindetail/${id}`}>
               <td>{rank}</td>
               <td>{symbol.toUpperCase()}</td>
               <td className='px-3'><img src={image.small} alt="" /></td>
