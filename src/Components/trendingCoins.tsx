@@ -14,12 +14,14 @@ function TrendingCoins() {
         var coins = trendingCoinsData.coins;
         return (
             <>
-            <h4 className='text-white text-2xl text-left'>Top Searches Today:</h4>
+            <h4 className='text-white text-2xl text-left'>Trending Searches Today:</h4>
             <div className='flex w-full my-2 overflow-scroll mb-5 py-3'>{
             coins.map((item:any)=>{
                 const {coin_id, name, small, symbol, market_cap_rank}=item.item
                 // console.log(item);
-                return( <div key={coin_id} className='trendingCard'>
+                return( 
+            // <Link to='/coindetail'>
+                <div key={coin_id} className='trendingCard'>
                             <div className='badge'>
                                 <h5 className='text-yellow-400 text-sm'>{market_cap_rank}</h5>
                             </div>
@@ -29,7 +31,9 @@ function TrendingCoins() {
                                 <h6 className='text-sm font-bold'>{name}</h6>
                             </div>
 
-                        </div>)
+                </div>
+            // </Link>            
+                        )
     })
 }</div>
 </>)

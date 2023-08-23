@@ -1,12 +1,16 @@
 import './App.css';
-import ListCoins from './Components/listCoins';
-import TrendingCoins from './Components/trendingCoins';
+
+import { Route, Routes } from "react-router-dom";
+import CoinDetails from './Components/CoinDetails';
+import Home from './Components/Home';
 function App() {
 
   return (
     <>
-    <TrendingCoins/>
-    <ListCoins />
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/coindetail/:name' element={<CoinDetails/>}/>
+    </Routes>
     </>
   )
 }
