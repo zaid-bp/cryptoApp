@@ -19,3 +19,6 @@
     @apply transition duration-300 active:scale-105 active:bg-black active:text-white;
   }
   
+td{
+  vertical-align: middle;
+}
