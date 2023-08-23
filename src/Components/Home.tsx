@@ -1,6 +1,5 @@
 import ListCoins from './listCoins';
-import TrendingCoins from './trendingCoins';
-import React from 'react'
+import TrendingCoins from './trendingCoins'
 
 function Home() {
   return (
@@ -8,7 +7,7 @@ function Home() {
     <TrendingCoins/>
     <ListCoins />
     </div>
-  )
-}
+  );
+};
 
 export default Home
