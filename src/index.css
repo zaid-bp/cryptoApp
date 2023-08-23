@@ -10,5 +10,12 @@
     @apply flex bg-white mx-2 rounded-md hover:bg-[#32332e] hover:text-white transition-all hover:scale-110 p-3;
   }
   .badge{
-    @apply bg-black p-1 h-7 w-7 rounded-full relative top-0 left-0 flex items-center justify-center
+    @apply bg-black p-1 h-7 w-7 rounded-full relative top-0 left-0 flex items-center justify-center;
   }
+  .Contentshovered{
+    @apply transition duration-500 hover:-translate-y-1 hover:bg-white hover:text-black hover:px-8;
+  }
+  .ContentsActive{
+    @apply transition duration-300 active:scale-105 active:bg-black active:text-white;
+  }
+  

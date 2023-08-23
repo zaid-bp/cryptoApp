@@ -23,7 +23,7 @@ function ListCoins() {
       const {id, symbol, name, image, market_data} = data;
       const {current_price:{usd}, market_cap_change_percentage_24h: mccp24h, market_cap_rank:rank, price_change_percentage_7d: mccp7d, price_change_percentage_14d: mccp14d, price_change_percentage_30d: mccp30d, price_change_percentage_1y: mccp1y,} = market_data
       return(
-        <tr className='custom' key={id}>
+        <tr className='custom Contentshovered ContentsActive' key={id}>
           <td className='contents'>
           <Link className='contents' to={`coindetail/${name}`}>
               <td>{rank}</td>
@@ -32,8 +32,8 @@ function ListCoins() {
               <td className='text-left'>{name}</td>
               <td>{usd}</td>
               <td className={`${mccp24h>0 ? 'text-green-400' : 'text-red-400'}`}>{mccp24h}</td>
-              <td>{mccp7d}</td>
-              <td>{mccp14d}</td>
+              <td className='lg-hidden'>{mccp7d}</td>
+              <td className='lg-hidden'>{mccp14d}</td>
               <td>{mccp30d}</td>
               <td>{mccp1y}</td>
            </Link>
