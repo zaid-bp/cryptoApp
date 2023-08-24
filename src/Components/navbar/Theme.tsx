@@ -1,7 +1,7 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../features/store'
-import { changeTheme } from '../../features/slices/coinSlice'
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../features/store';
+import { changeTheme } from '../../features/slices/coinSlice';
+
 function Theme() {
     const theme = useSelector((state:RootState)=>state.coin.theme)
     const dispatch = useDispatch();

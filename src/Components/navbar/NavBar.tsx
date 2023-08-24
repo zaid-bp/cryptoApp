@@ -1,6 +1,6 @@
-import React from 'react'
-import Theme from './Theme'
+import Theme from './Theme';
 import logo from "../../../public/cryptomartlogo.png";
+
 function NavBar() {
   return (
     <>
