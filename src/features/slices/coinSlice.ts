@@ -15,7 +15,7 @@ interface coin{
     isError: undefined | string
 }
 const initialState:coin={
-    theme:"material",
+    theme:"dark",
     coinData: null,
     // trendingCoins: null,
     // isLoadingTrends:true,

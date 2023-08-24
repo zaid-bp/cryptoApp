@@ -1,12 +1,16 @@
 import ListCoins from './listCoins';
 import TrendingCoins from './trendingCoins'
+import NavBar from './navbar/NavBar';
 
 function Home() {
   return (
-    <div className='px-20 py-10'>
-    <TrendingCoins/>
-    <ListCoins />
-    </div>
+    <>
+      <NavBar/>
+      <div className='px-20 py-10'>
+      <TrendingCoins/>
+      <ListCoins />
+      </div>
+    </>
   );
 };
 

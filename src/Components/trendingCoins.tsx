@@ -14,12 +14,13 @@ function TrendingCoins() {
         }    
         fetchData()
     },[])
+    
     if(trendingCoinsData){
         var coins = trendingCoinsData.coins;
         return (
             <>
             <h4 className={`text-2xl text-left ${theme!=='material'?'text-white':'text-[#32332e]'}`}>Trending Searches Today:</h4>
-            <div className='flex w-full my-2 overflow-scroll mb-5 py-3'>{
+            <div style={{scrollbarWidth:'none', overflow: 'scroll', msOverflowStyle: 'none'}} className='flex w-full my-2 overflow-scroll mb-5 py-3'>{
             coins.map((item:any)=>{
                 const {coin_id, name, small, symbol, market_cap_rank}=item.item
                 return( 

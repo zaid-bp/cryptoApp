@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 0.1em; /* Width of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1); /* Color of the scrollbar handle */
+  border-radius: 4px; /* Rounded corners for the handle */
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Color when hovered */
 }
 .custom {
     @apply bg-[#32332e] text-white border-b-2 py-4;
