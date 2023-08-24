@@ -6,6 +6,7 @@ export const fetchData = createAsyncThunk('coin/fetchData',async() => {
 })
 
 interface coin{
+    theme:"material"|"dark";
     coinData:any;
     // trendingCoins:any;
     // isLoadingTrends:boolean;
@@ -14,6 +15,7 @@ interface coin{
     isError: undefined | string
 }
 const initialState:coin={
+    theme:"material",
     coinData: null,
     // trendingCoins: null,
     // isLoadingTrends:true,
@@ -24,7 +26,15 @@ const initialState:coin={
 const coinSlice = createSlice({
     name: 'coin',
     initialState,
-    reducers:{},
+    reducers:{
+        changeTheme(state){
+            if(state.theme==='material'){
+                state.theme = "dark";
+            }else{
+                state.theme='material';
+            }
+        }
+    },
     extraReducers(builder) {
         builder
         .addCase(fetchData.fulfilled ,(state, action)=>{
@@ -37,4 +47,5 @@ const coinSlice = createSlice({
     },
 })
 
-export default coinSlice.reducer
+export default coinSlice.reducer;
+export const {changeTheme} = coinSlice.actions;

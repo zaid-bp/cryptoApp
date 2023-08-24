@@ -2,17 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .custom {
     @apply bg-[#32332e] text-white border-b-2 py-4;
   }
   .trendingCard{
-    @apply flex bg-white mx-2 rounded-md hover:bg-[#32332e] hover:text-white transition-all hover:scale-110 p-3;
+    @apply flex bg-[#32332e] text-white mx-2 rounded-md hover:bg-white ring-1 ring-offset-0 ring-white hover:text-black transition-all hover:scale-110 p-3;
   }
   .badge{
     @apply bg-black p-1 h-7 w-7 rounded-full relative top-0 left-0 flex items-center justify-center;
   }
-  .Contentshovered{
+  .ContentsHovered{
     @apply transition duration-500 hover:-translate-y-1 hover:bg-white hover:text-black hover:px-8;
   }
   .ContentsActive{

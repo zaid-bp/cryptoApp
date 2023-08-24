@@ -3,15 +3,22 @@ import './App.css';
 import { Route, Routes } from "react-router-dom";
 import CoinDetails from './Components/CoinDetails';
 import Home from './Components/Home';
+import NavBar from './Components/navbar/NavBar';
+import { useSelector } from 'react-redux';
+import {RootState} from "./features/store";
 function App() {
+  const theme = useSelector((state:RootState)=>state.coin.theme)
 
   return (
-    <>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/coindetail/:coinId' element={<CoinDetails/>}/>
-    </Routes>
-    </>
+    <div className={`${theme==='material'?'filter invert':'filter invert-0'} transition-all duration-300 ease-in-out`}>
+    <NavBar/>
+    <div className=''>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/coindetail/:coinId' element={<CoinDetails/>}/>
+      </Routes>
+    </div>
+    </div>
   )
 }
 

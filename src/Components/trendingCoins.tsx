@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../features/store'
 
 function TrendingCoins() {
     const [trendingCoinsData ,setTrendingCoinsData] = useState<any>('')
+    const theme = useSelector((state:RootState)=>state.coin.theme)
+    
     useEffect(()=>{
         const fetchData=async()=>{
             const response = await fetch('https://api.coingecko.com/api/v3/search/trending');
@@ -14,13 +18,11 @@ function TrendingCoins() {
         var coins = trendingCoinsData.coins;
         return (
             <>
-            <h4 className='text-white text-2xl text-left'>Trending Searches Today:</h4>
+            <h4 className={`text-2xl text-left ${theme!=='material'?'text-white':'text-[#32332e]'}`}>Trending Searches Today:</h4>
             <div className='flex w-full my-2 overflow-scroll mb-5 py-3'>{
             coins.map((item:any)=>{
                 const {coin_id, name, small, symbol, market_cap_rank}=item.item
-                // console.log(item);
                 return( 
-            // <Link to='/coindetail'>
                 <div key={coin_id} className='trendingCard'>
                             <div className='badge'>
                                 <h5 className='text-yellow-400 text-sm'>{market_cap_rank}</h5>
@@ -32,7 +34,6 @@ function TrendingCoins() {
                             </div>
 
                 </div>
-            // </Link>            
                         )
     })
 }</div>

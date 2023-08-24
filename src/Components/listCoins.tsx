@@ -23,7 +23,7 @@ function ListCoins() {
       const {id, symbol, name, image, market_data} = data;
       const {current_price:{usd}, market_cap_change_percentage_24h: mccp24h, market_cap_rank:rank, price_change_percentage_7d: mccp7d, price_change_percentage_14d: mccp14d, price_change_percentage_30d: mccp30d, price_change_percentage_1y: mccp1y,} = market_data
       return(
-        <tr className='custom Contentshovered ContentsActive' key={id}>
+        <tr className='custom ContentsHovered ContentsActive' key={id}>
           <td className='contents'>
           <Link className='contents' to={`coindetail/${id}`}>
               <td>{rank}</td>
